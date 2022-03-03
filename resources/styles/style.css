@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'sf-pro-regular';
+    src: url('SFPRODISPLAYMEDIUM.OTF') format('opentype');
+}
+
+html{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(64, 64, 64);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-family: sf-pro-regular;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    height: 100%;
+}
+
+div.number-section{
+    background: rgb(64, 64, 64);
+    color: #fff;
+    text-align: right;
+    padding: 40px 15px 7px 4px;
+    font-size: 47px;
+    -webkit-app-region: drag;
+    user-select: none;
+    white-space:nowrap;           
+}
+
+div.number-section-no-darwin{
+    padding: 13px 15px 7px 4px !important;          
+}
+
+div.keyboard-section{
+    display: inline-flex;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+button.btn-keyboard{
+    width: 60px;
+    height: 46px;
+    color: #fff;
+    border-radius: 0;
+    margin: 1px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.1s;
+    border: 0;
+}
+
+button.btn-keyboard:hover{
+    border: 3px solid white;
+    transition: 0.1s;
+    color: #fff;
+}
+
+button.btn-zero{
+    width: 122px;
+}
+
+button.btn-function-top{
+    background: rgb(89 92 108 / 53%) !important;
+}
+
+button.btn-function{
+    background: rgb(73, 92, 108);
+}
+
+button.btn-action{
+    background:rgb(73, 149, 236);
+}

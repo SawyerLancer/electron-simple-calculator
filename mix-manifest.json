@@ -1,0 +1,11 @@
+{
+    "/src/index.html": "/src/index.html",
+    "/src/dist.js": "/src/dist.js",
+    "/src/SFPRODISPLAYMEDIUM.OTF": "/src/SFPRODISPLAYMEDIUM.OTF",
+    "/src/dist.css": "/src/dist.css",
+    "/build/icon.png": "/build/icon.png",
+    "/build/icon.icns": "/build/icon.icns",
+    "/build/icon.ico": "/build/icon.ico",
+    "/src/dist.min.js": "/src/dist.min.js",
+    "/src/dist.min.css": "/src/dist.min.css"
+}

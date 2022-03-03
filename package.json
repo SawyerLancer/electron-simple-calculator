@@ -1,0 +1,61 @@
+{
+  "name": "SimpleCalculator",
+  "email": "soldier707sawyer@gmail.com",
+  "version": "1.0.0",
+  "description": "simple electron calculator",
+  "main": "main.js",
+  "author": {
+    "name": "Nikita Livadchenko",
+    "email": "soldier707sawyer@gmail.com"
+  },
+  "scripts": {
+    "dev": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron .",
+    "production": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron .",
+    "build-mac": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && yarn electron-builder --mac",
+    "build-windows": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron-builder -w",
+    "build-linux": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron-builder --linux"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/soldier707sawyer/calculator-electron.git"
+  },
+  "keywords": [
+    "calculator",
+    "electron",
+    "fun"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/soldier707sawyer/calculator-electron/issues"
+  },
+  "homepage": "https://gitlab.com/soldier707sawyer/calculator-electron#readme",
+  "devDependencies": {
+    "electron": "^17.1.0",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "appId": "com.electron.simplecalculator",
+    "mac": {
+      "category": "public.app-category.finance"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": "deb"
+    },
+    "directories": {
+      "buildResources": "build"
+    }
+  },
+  "dependencies": {
+    "@electron/build-tools": "^1.0.4",
+    "@electron/check-python-tls": "^1.0.1",
+    "cross-env": "^7.0.3",
+    "electron-packager": "^15.4.0",
+    "global": "^4.4.0",
+    "laravel-mix": "^6.0.42",
+    "minify-html-webpack-plugin": "^1.1.6",
+    "node-sass": "^7.0.1"
+  }
+}
