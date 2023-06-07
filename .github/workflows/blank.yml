@@ -31,7 +31,7 @@ jobs:
       - uses: actions/setup-node@v3
       - run: npm install -g yarn
       - run: yarn install
-      - run: yarn run publish
+      - run: GH_TOKEN=${{ secrets.TOKEN_NAME }} yarn run publish
 
 
 
