@@ -1,0 +1,18 @@
+{
+    "appId": "com.electron.simplecalculator",
+    "productName": "Electron simple calculator",
+    "copyright": "Nikita Livadchenko",    
+    "mac": {
+      "category": "public.app-category.finance",
+      "publish": ["github"]
+    },
+    "win": {
+      "target": "portable"
+    },
+    "linux": {
+      "target": "deb"
+    },
+    "directories": {
+      "buildResources": "build"
+    }
+}
