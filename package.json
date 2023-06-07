@@ -13,7 +13,8 @@
     "production": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron .",
     "build-mac": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && yarn electron-builder --mac",
     "build-windows": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron-builder -w",
-    "build-linux": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron-builder --linux"
+    "build-linux": "node node_modules/cross-env/src/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js && electron-builder --linux",
+    "publish": "electron-builder publish"
   },
   "repository": {
     "type": "git",
@@ -30,13 +31,15 @@
   },
   "homepage": "https://gitlab.com/soldier707sawyer/calculator-electron#readme",
   "devDependencies": {
+    "@electron-forge/publisher-github": "^6.1.1",
     "electron": "^17.1.0",
-    "electron-builder": "^22.14.13"
+    "electron-builder": "^23.0.2"
   },
   "build": {
     "appId": "com.electron.simplecalculator",
     "mac": {
-      "category": "public.app-category.finance"
+      "category": "public.app-category.finance",
+      "publish": ["github"]
     },
     "win": {
       "target": "portable"
