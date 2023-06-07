@@ -22,7 +22,6 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     runs-on: macos-latest
-    name: build app
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
